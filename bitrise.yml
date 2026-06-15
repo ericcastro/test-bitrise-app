@@ -42,11 +42,6 @@ workflows:
     - recreate-user-schemes@1:
         inputs:
         - project_path: $BITRISE_PROJECT_PATH
-    - xcode-build-for-test@1:
-        inputs:
-        - project_path: $BITRISE_PROJECT_PATH
-        - scheme: $BITRISE_SCHEME
-        - destination: platform=iOS Simulator,name=iPhone 8 Plus,OS=latest
     - cache-push@2: {}
     - deploy-to-bitrise-io@2: {}
     - git::https://bitbucket.org/datatheorem/dt-bitrise-integration@implement-severity-filters:
